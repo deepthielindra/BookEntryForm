@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Entry Form</title>
+    <link rel="stylesheet" type="text/css" href="BookCSS.css">
+    <script src="BookEntryvalidation.js"></script>
+</head>
+<body>
+    <header><h2><b>BOOK ENTRY FORM</b></h2></header>
+
+    <form action="#" id="BookForm" method="GET">
+
+        <table class="bookTable"  align="center">
+
+            <tr>
+                <td><label for="isbnId">Enter ISBN number : </label></td>
+                <td><input type="number" id="isbnId" name="isbn" maxlength="15"></td>
+                <td><label id="isbnlab"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="titleId">Enter book title : </label></td>
+                <td><input type="text" id="titleId" name="title"></td>
+                <td><label id="titlelab"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="pricelab">Enter price : </label></td>
+                <td><input type="text" id="priceId" name="price"></td>
+            </tr>
+
+            <tr>
+                <td><label for="datelab">Enter published date : </label></td>
+                <td><input type="date" id="dateId" name="date"></td>
+            </tr>
+
+            <tr>
+                <td><label for="booklab">Book type : </label></td>
+                <td><select name="book" id="bookId" required>
+                    <option value="" disabled selected>select one option</option>
+                    <option value="programming">Programming</option>
+                    <option value="fictional">Comic</option>
+                    <option value="framework">Science</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="copieslab">Number of copies : </label></td>
+                <td><input type="number" min="1" max="10" id="copiesId" name="copies"></td>
+                <td><label id="copiesId"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="publisherlab">Publisher name: </label></td>
+                <td><input type="text" id="publisherId" name="publisher"></td>
+                <td><label id="publisherId"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="authorlab">Author name: </label></td>
+                <td><input type="text" id="authorId" name="author"></td>
+                <td><label id="authorMsg"></label></td>
+            </tr>
+            
+            <tr>
+                <td><label for="authorAddresslab">Author address: </label></td>
+                <td><textarea name="authorAddress" id="authorAddressId"></textarea></td>
+            </tr>
+
+            <tr id="submitId" align="center">
+                <td><input type="submit" value="Add Data" style="background-color: rgb(230, 62, 33)"  onclick="return validateBook()" ></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
